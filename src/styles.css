@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+.logo-color {
+    color: red;
+    font-weight: bold;
+}
+
+.btn-red {
+    color: white;
+    font-weight: bold;
+    background-color: rgb(253, 31, 31);
+}
+
+.card-black {
+    background-color: rgba(10, 10, 10, 0.76);
+    color: blanchedalmond;
+}
+
+.black-background {
+    background-color: rgba(10, 10, 10, 0.76)
+}
