@@ -9,18 +9,18 @@
               </h5><br>
               <div class="form-group">
                   <label>Username</label>
-                <input type="email" class="form-control input-balck">
-                <div class="invalid-feedback">Please enter a valid email or phone number.</div>
+                <input type="email" [(ngModel)]="login.username" class="form-control input-balck">
+                <div class="invalid-feedback">{{authError}}</div>
               </div>
               <div class="form-group">
                 <label>Password</label>
-                <input type="password" class="form-control input-balck">
+                <input type="password" [(ngModel)]="login.password" class="form-control input-balck">
               </div>
               <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input">
+                <input type="checkbox" [(ngModel)]="login.rememberMe" class="form-check-input">
                 <label class="form-check-label">Remember me</label>
               </div>
-              <button type="submit" class="btn btn-red btn-block">Sign in</button>
+              <button type="submit" (click)="authenticate()" class="btn btn-red btn-block">Sign in</button>
               <br>
               <p>New to Netflix? <a routerLink="/signup">Sign up now.</a></p>
               <br>

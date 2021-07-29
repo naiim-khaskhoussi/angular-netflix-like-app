@@ -8,6 +8,10 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { SigninFormComponent } from './signin-form/signin-form.component';
 import { FooterComponent } from './footer/footer.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { FormsModule } from '@angular/forms';
+import { SettingsComponent } from './settings/settings.component';
+import { ExploreComponent } from './explore/explore.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +20,15 @@ import { SignupFormComponent } from './signup-form/signup-form.component';
     CarouselComponent,
     SigninFormComponent,
     FooterComponent,
-    SignupFormComponent
+    SignupFormComponent,
+    UserProfileComponent,
+    SettingsComponent,
+    ExploreComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
