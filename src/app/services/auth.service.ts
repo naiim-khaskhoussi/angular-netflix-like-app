@@ -54,12 +54,14 @@ export class AuthService {
 
   follow(follower: string, following: string) {
     this.users.forEach(user => {
-      if (user.username == following) user.followers.push(follower);
-      if (user.username == follower) user.following.push(following);
+      if (user.username == following)
+        user.followers.push(follower);
+      if (user.username == follower) 
+        user.following.push(following);
     })
   }
 
-  logOut() {
+  logOutUser() {
     localStorage.removeItem("user");
   }
 

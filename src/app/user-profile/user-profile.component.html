@@ -1,14 +1,16 @@
 <div class="row">
     <div class="col-md-3"></div>
     <div class="col-md">
-        <div *ngIf="getCurrentUser()" class="card card-black">
+        <div *ngIf="user" class="card card-black">
             <div class="card-body text-center">
                 <br>
                 <h4 class="card-title text-center">
-                    <strong>@{{getCurrentUser()}}</strong>
+                    <strong>@{{user.username}}</strong>
                     <br>
                     <small>
-                        <span class="badge badge-secondary">ADMIN</span>
+                        <span class="badge badge-secondary">
+                            {{user.role.toString()}}
+                        </span>
                     </small>
                 </h4>
                 
@@ -17,23 +19,28 @@
                     Some quick example text to build on the card title and make up the bulk of the card's content.
                 </p>
                 <div>
-                    <button type="button" class="btn btn-outline btn-red little-margin" disabled>
-                        Followers 
-                        <span class="badge badge-light">
-                            {{getUser(getCurrentUser()).followers.length}} 
-                        </span>
-                        <span class="sr-only"></span>
-                    </button>
-                    <button type="button" class="btn btn-outline btn-red little-margin" disabled>
-                        Following 
-                        <span class="badge badge-light">
-                            {{getUser(getCurrentUser()).following.length}} 
-                        </span>
-                        <span class="sr-only"></span>
-                    </button>
+                    <a type="button" class="btn btn-outline btn-red little-margin" >
+                        {{user.followers.length}}  Followers 
+                    </a>
+                    <a type="button" class="btn btn-outline btn-red little-margin" >
+                        {{user.following.length}} Following 
+                    </a>
                 </div>
                 <br>
-                <button type="button" (click)="follow()" class="btn btn-red">Follow</button>
+                <button type="button" *ngIf="user.username!=getUser(getCurrentUser()).username" (click)="follow()" class="btn btn-red">
+                    Follow
+                </button>
+            </div>
+        </div>
+        <br>
+        <div *ngIf="user" class="card card-black">
+            <div class="card-body">
+                <h5>Movies by {{user.username}}</h5>
+                <ul class="list-group list-group-flush">
+                    <li *ngFor="let movie of userMovies" class="list-group-item card-black">
+                        <app-movie [movie]="movie"></app-movie>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

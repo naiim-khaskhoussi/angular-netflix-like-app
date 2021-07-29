@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'signup', component: SignupFormComponent },
   { path: 'explore', component: ExploreComponent },
   { path: 'settings', component: SettingsComponent },
+  //{ path: 'profile', component: UserProfileComponent },
   { path: ':username', component: UserProfileComponent }
 ];
 

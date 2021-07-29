@@ -12,6 +12,8 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { FormsModule } from '@angular/forms';
 import { SettingsComponent } from './settings/settings.component';
 import { ExploreComponent } from './explore/explore.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { MovieComponent } from './movie/movie.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { ExploreComponent } from './explore/explore.component';
     SignupFormComponent,
     UserProfileComponent,
     SettingsComponent,
-    ExploreComponent
+    ExploreComponent,
+    EditProfileComponent,
+    MovieComponent
   ],
   imports: [
     BrowserModule,
