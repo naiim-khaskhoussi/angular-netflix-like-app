@@ -1,5 +1,6 @@
 export interface Movie {
     name: string,
     category: string,
-    publisher: string
+    publisher: string,
+    image: string
 }

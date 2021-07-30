@@ -52,6 +52,15 @@ export class AuthService {
     
   }
 
+  updateUser(username: string, uUser:User) {
+    this.users.forEach(user => {
+      if (user.username == username) {
+        user = uUser;
+        console.log(user);
+      }
+    })
+  }
+
   follow(follower: string, following: string) {
     this.users.forEach(user => {
       if (user.username == following)

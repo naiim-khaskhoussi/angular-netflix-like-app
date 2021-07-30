@@ -15,17 +15,20 @@ export class MovieService {
     {
       name: "Movie 1",
       category: "Category 1",
-      publisher: "colombia"
+      publisher: "colombia",
+      image: "https://www.looper.com/img/gallery/365-days-part-2-release-date-cast-and-plot-what-we-know-so-far/l-intro-1621027334.jpg"
     },
     {
       name: "Movie 2",
       category: "Category 1",
-      publisher: "colombia"
+      publisher: "colombia",
+      image: ""
     },
     {
       name: "Movie 3",
       category: "Category 2",
-      publisher: "hama"
+      publisher: "hama",
+      image: ""
     }
   ]
   constructor() { }
@@ -42,7 +45,7 @@ export class MovieService {
   searchMovies(keywords: string, category: string) {
     let resMovies: Movie[] = [];
     this.movies.forEach(movie => {
-      if (movie.name.includes(keywords) || movie.category == category) {
+      if (movie.name.includes(keywords) && movie.category == category) {
         resMovies.push(movie)
       }
     });

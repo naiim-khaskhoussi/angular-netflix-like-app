@@ -19,7 +19,7 @@ export class ProfileSettingsComponent implements OnInit {
   }
 
   updateSettings() {
-
+    this.authService.updateUser(this.user.username, this.user);
   }
 
 }

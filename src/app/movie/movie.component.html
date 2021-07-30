@@ -1,8 +1,16 @@
 <div class="card card-black">
     <div class="card-body">
-      <h4 class="card-title">
-          <strong>{{movie.name}}</strong> 
-      </h4>
-      <span class="badge badge-danger">{{movie.category}}</span> 
+      <br>
+      <div class="row">
+          <div class="col-md-5">
+              <img class="my-img" src="{{movie.image}}" alt="">
+          </div>
+          <div class="col-md-7">
+            <h4 class="card-title">
+                <strong>{{movie.name}}</strong> 
+            </h4>
+            <span class="badge badge-danger">{{movie.category}}</span> 
+          </div>
+      </div> 
     </div>
 </div>
