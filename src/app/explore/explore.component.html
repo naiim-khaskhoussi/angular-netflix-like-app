@@ -1,1 +1,44 @@
-<p>explore works!</p>
+<div class="row">
+    <div class="col-md-4">
+        <div class="card card-black">
+            <br>
+            <div class="card-body">
+              <h5 class="card-title">
+                  <strong>Explore movies</strong>
+              </h5><br>
+              <div class="form-group">
+                <label>Keywords</label>
+                <input type="email" [(ngModel)]="keywords" class="form-control input-balck">
+                <div class="invalid-feedback"></div>
+              </div>
+              <div class="form-group">
+                <label>Category</label>
+                <select class="form-control" [(ngModel)]="category">
+                    <option *ngFor="let category of categories" value="{{category}}">
+                      {{category}}
+                    </option>
+                </select>
+              </div>
+
+              <br>
+              <!--
+              <div class="form-group form-check">
+                <input type="checkbox" [(ngModel)]="user." class="form-check-input">
+                <label class="form-check-label">Remember me</label>
+              </div>
+              -->
+              <button type="submit" (click)="explore()" class="btn btn-red btn-block">
+                  Search movies
+              </button>
+              <br>
+            </div>
+        </div>        
+    </div>
+    <div class="col-md-8">
+      <ul class="list-group list-group-flush">
+        <li *ngFor="let movie of moviesResult" class="list-group-item card-black">
+            <app-movie [movie]="movie"></app-movie>
+        </li>
+      </ul>
+    </div>
+</div>

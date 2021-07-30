@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Movie } from '../interfaces/movie';
+import { MovieService } from '../services/movie.service';
 
 @Component({
   selector: 'app-explore',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExploreComponent implements OnInit {
 
-  constructor() { }
+  categories: string[] = [];
+  keywords: string = "";
+  category: string = "Select category";
+  moviesResult: Movie[] = [];
+
+  constructor(private movieService: MovieService) { }
 
   ngOnInit(): void {
+    this.categories = this.movieService.getAllCategories();
+    console.log(this.categories);
+  }
+
+  explore() {
+    this.moviesResult = this.movieService.searchMovies(this.keywords, this.category);
   }
 
 }

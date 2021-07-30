@@ -30,7 +30,7 @@ export class AuthService {
     return localStorage.getItem("user");
   }
 
-  getUser(username: string) {
+  getUser(username: any) {
     let filteredUsers = this.users
       .filter(user => user.username==username);
     console.log(filteredUsers);

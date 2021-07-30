@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-md"></div>
+    <div class="col-md-6">
+        <div class="card card-black">
+            <br>
+            <div class="card-body">
+              <h5 class="card-title">
+                  <strong>Edit profile</strong>
+              </h5><br>
+              <div class="form-group">
+                  <label>Username</label>
+                <input type="email" [(ngModel)]="user.username" class="form-control input-balck" disabled>
+                <div class="invalid-feedback"></div>
+              </div>
+              <div class="form-group">
+                <label>Password</label>
+                <input type="password" [(ngModel)]="user.password" class="form-control input-balck">
+              </div>
+              <div class="form-group">
+                <label>Retype password</label>
+                <input type="password" [(ngModel)]="passwordRetype" class="form-control input-balck">
+              </div>
+              <br>
+              <!--
+              <div class="form-group form-check">
+                <input type="checkbox" [(ngModel)]="user." class="form-check-input">
+                <label class="form-check-label">Remember me</label>
+              </div>
+              -->
+              <button type="submit" (click)="updateSettings()" class="btn btn-red btn-block">
+                  Update profile information
+              </button>
+              <br>
+            </div>
+        </div>
+    </div>
+    <div class="col"></div>
+</div>

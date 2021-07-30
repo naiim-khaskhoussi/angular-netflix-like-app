@@ -10,10 +10,10 @@ import { FooterComponent } from './footer/footer.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { FormsModule } from '@angular/forms';
-import { SettingsComponent } from './settings/settings.component';
 import { ExploreComponent } from './explore/explore.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { MovieComponent } from './movie/movie.component';
+import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
 
 @NgModule({
   declarations: [
@@ -24,10 +24,10 @@ import { MovieComponent } from './movie/movie.component';
     FooterComponent,
     SignupFormComponent,
     UserProfileComponent,
-    SettingsComponent,
     ExploreComponent,
     EditProfileComponent,
-    MovieComponent
+    MovieComponent,
+    ProfileSettingsComponent
   ],
   imports: [
     BrowserModule,
